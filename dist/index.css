@@ -1,0 +1,12 @@
+
+.mathu {
+  width: 60px;
+  height: 60px;
+  border: solid 1px;
+  background-color: bisque;
+}
+.root {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}

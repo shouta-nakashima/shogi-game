@@ -1,5 +1,4 @@
-import World from './world'
+import {createBoard} from './board'
 
-const root = document.getElementById("root")
-const world = new World("hello world!")
-world.sayHello(root)
+createBoard()
+
