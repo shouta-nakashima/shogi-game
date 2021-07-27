@@ -2,26 +2,15 @@ import { Piece } from './piece';
 import { Setting } from '../setting';
 
 export class Silver extends Piece {
-  firstNum: number
-  secondNum:number
-  constructor(_turn: boolean,firstNum:number,secondNum:number, _pieceNum: number = 3,) {
+  _firstNum: number
+  _secondNum: number
+  _idName:string
+  constructor(_turn: boolean, _firstNum:number,_secondNum:number,_idName:string, _pieceNum: number = 3,) {
     super(_turn, _pieceNum, Setting.PIECES[_pieceNum])
-    this.firstNum = firstNum
-    this.secondNum = secondNum
-    const home = document.getElementById(`mathu${firstNum}${secondNum}`)
-    const silver = document.createElement('div')
-    const p = document.createElement("p")
-    silver.appendChild(p)
-    p.innerHTML = Setting.PIECES[_pieceNum]
-    if (_turn === false) {
-      p.classList.add("turn") 
-    } else {
-      p.classList.add("inner_text")
-    }
-    silver.id = "silver"
-    silver.classList.add("piece")
-    home?.appendChild(silver)
-    
+    this._firstNum = _firstNum
+    this._secondNum = _secondNum
+    this._idName = _idName
+    this.create(this._firstNum,this._secondNum,this._idName) 
     
   }
 }

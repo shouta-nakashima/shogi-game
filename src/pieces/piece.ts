@@ -25,5 +25,19 @@ export class Piece {
   public pieceNum(): number {
     return this._pieceNum
   }
-  
+  public create(firstNum: number,secondNum:number,idName:string) {
+    const home = document.getElementById(`mathu${firstNum}${secondNum}`)
+    const king = document.createElement('div')
+    const p = document.createElement("p")
+    king.appendChild(p)
+    p.innerHTML = Setting.PIECES[this._pieceNum]
+    if (this._turn === false) {
+      p.classList.add("turn") 
+    } else {
+      p.classList.add("inner_text")
+    }
+    king.id = idName
+    king.classList.add("piece")
+    home?.appendChild(king)
+  }
 } 
