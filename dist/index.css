@@ -1,12 +1,43 @@
-
+p {
+  margin: 0;
+  padding: 0;
+}
 .mathu {
   width: 60px;
   height: 60px;
   border: solid 1px;
-  background-color: bisque;
+  background-color: #ffd24c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .root {
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.piece {
+  border: 1px solid black;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 46px;
+  border-radius: 12px;
+  background-color: #ffa10a;
+}
+.inner_text {
+  width: 80%;
+  height: 80%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.turn {
+  width: 80%;
+  height: 80%;
+  font-size: 30px;
+  font-weight: bold;
+  transform: rotateX( 180deg );
 }

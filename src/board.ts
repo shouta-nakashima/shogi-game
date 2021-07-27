@@ -1,4 +1,4 @@
-const board = [
+export const board = [
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
   [0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -20,7 +20,7 @@ export const createBoard = () => {
     for (let j = 0; j < 9; j++) {
       board[i][j] = i * 9 + (j + 1)
       const mathu = document.createElement("div")
-      mathu.id = "mathu"
+      mathu.id = `mathu${i}${j}`
       mathu.classList.add("mathu")
       boards.appendChild(mathu)
     }
